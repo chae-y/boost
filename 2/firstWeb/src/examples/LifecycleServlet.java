@@ -32,7 +32,7 @@ public class LifecycleServlet extends HttpServlet {
 		String name = req.getParameter("name");
 		out.println("<h1> hello " + name + "</h1>");
 		out.close();
-	}
+	}//사용자가 요청했을때 응답-동적페이지 
 
 	public void destroy() {
 		System.out.println("destroy 호출!!");
