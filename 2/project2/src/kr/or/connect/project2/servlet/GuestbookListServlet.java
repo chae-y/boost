@@ -37,12 +37,13 @@ public class GuestbookListServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		GuestbookDao dao= new GuestbookDao();
 		List<Guestbook> list = dao.getGuestbooks();
-		for(Guestbook gb : list) {
-			out.print("id : "+gb.getId()+"<br>");
-			out.print("name : "+gb.getName()+"<br>");
-			out.print(gb.getContent()+"<br>");
-			out.print("regdate : "+gb.getRegdate()+"<br>");
-		}
+		out.print("id : "+"<br>");
+//		for(Guestbook gb : list) {
+//			out.print("id : "+gb.getId()+"<br>");
+//			out.print("name : "+gb.getName()+"<br>");
+//			out.print(gb.getContent()+"<br>");
+//			out.print("regdate : "+gb.getRegdate()+"<br>");
+//		}
 		out.close();
 	}
 

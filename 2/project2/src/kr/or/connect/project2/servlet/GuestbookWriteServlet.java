@@ -1,5 +1,8 @@
 package kr.or.connect.project2.servlet;
 
+import kr.or.connect.project2.dao.GuestbookDao;
+import kr.or.connect.project2.dto.Guestbook;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
