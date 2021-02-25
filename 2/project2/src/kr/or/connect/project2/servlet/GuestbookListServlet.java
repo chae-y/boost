@@ -34,17 +34,16 @@ public class GuestbookListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//작성
 		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 		GuestbookDao dao= new GuestbookDao();
 		List<Guestbook> list = dao.getGuestbooks();
-		out.print("id : "+"<br>");
 //		for(Guestbook gb : list) {
 //			out.print("id : "+gb.getId()+"<br>");
 //			out.print("name : "+gb.getName()+"<br>");
 //			out.print(gb.getContent()+"<br>");
 //			out.print("regdate : "+gb.getRegdate()+"<br>");
 //		}
-		out.close();
+		//out.close();
 	}
 
 }

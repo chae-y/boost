@@ -30,6 +30,11 @@ public class GuestbookWriteServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//작성
+		String name = request.getParameter("name");
+		String content = request.getParameter("content");
+		GuestbookDao dao = new GuestbookDao();
+		Guestbook gb = new Guestbook(name,content);
+		dao.addGuestbook(gb);
 	}
 
 }

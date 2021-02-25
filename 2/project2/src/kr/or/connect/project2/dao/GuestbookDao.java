@@ -40,11 +40,11 @@ public class GuestbookDao {
 		return list;
 	}
 	
-	public void addGueestbook(Guestbook guestbook) {
+	public void addGuestbook(Guestbook guestbook) {
 		//작성
 		Connection conn = DBUtil.getConnection();
 		PreparedStatement ps = null;
-		String sql = "INSERT INTO guestbook VALUES(?, ?, now())";
+		String sql = "INSERT INTO guestbook(name,content,regdate) VALUES(?, ?, now())";
 		
 		try {
 			ps = conn.prepareStatement(sql);
